@@ -1,0 +1,3 @@
+If WScript.CreateObject("WScript.Shell").AppActivate("Super BuildÅ^SS3") Then
+	WScript.Quit 1
+End If
