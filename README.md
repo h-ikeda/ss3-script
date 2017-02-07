@@ -42,3 +42,25 @@ Set sh = CreateObject("WScript.Shell")
 result = sh.Run("ss3-script\SS3-解析.vbs", 0, True)
 ' 解析完了後、result = 0
 ```
+### CSV入力
+CSVファイルからデータの読み込みを行います。  
+SS3が起動し、データを開いておく必要があります。  
+ダイアログが開いていてはいけません。  
+全ての項目を選択した状態で読み込みが行われます。
+```vbs
+Dim sh
+Set sh = CreateObject("WScript.Shell")
+result = sh.Run("ss3-script\SS3-CSV入力.vbs Path\to\input.csv", 0, True)
+' 読み込み完了後、result = 0
+```
+### CSV出力
+解析結果をCSVファイルに出力します。  
+SS3が起動し、データを開いておく必要があります。  
+ダイアログが開いていてはいけません。  
+すべての解析結果を出力します。
+```vbs
+Dim sh
+Set sh = CreateObject("WScript.Shell")
+result = sh.Run("ss3-script\SS3-CSV出力.vbs Path\to\output.csv", 0, True)
+' 出力完了後、result = 0
+```
