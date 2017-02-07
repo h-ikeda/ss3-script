@@ -64,3 +64,14 @@ Set sh = CreateObject("WScript.Shell")
 result = sh.Run("ss3-script\SS3-CSV出力.vbs Path\to\output.csv", 0, True)
 ' 出力完了後、result = 0
 ```
+### メモ追記
+データ管理用のメモに追記します。  
+最終行を改行して追記します。  
+SS3が起動し、データを開いておく必要があります。  
+ダイアログが開いていてはいけません。
+```vbs
+Dim sh
+Set sh = CreateObject("WScript.Shell")
+result = sh.Run("ss3-script\SS3-メモ追記.vbs ""Comments to be appended""", 0, True)
+' メモ追記後、result = 0
+```
