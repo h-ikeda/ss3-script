@@ -76,7 +76,7 @@ result = sh.Run("ss3-script\SS3-メモ追記.vbs ""Comments to be appended""", 0
 ' メモ追記後、result = 0
 ```
 ### 出力したCSVファイルの読み取り
-CSV出力で出力したCSVファイルからデータを読み取る関数を利用できます。  
+CSV出力で出力したCSVファイルからデータを読み取る関数を利用できます。  
 関数を利用するには、ExecuteGlobal関数で予めスクリプトの内容を読み込んでおきます。
 ```vbs
 Dim lib
