@@ -2,7 +2,7 @@
 Super Build／SS3 (UNION SYSTEM Inc.) をVisual Basic Script で操作するためのスクリプト集です。
 ## Usage
 ### 非起動確認
-SS3プログラムが起動していないことを確認します。  
+SS3プログラムが起動していないことを確認します。  
 スクリプト実行前に確認して二重起動を防ぐために使用します。
 ```vbs
 Dim sh
