@@ -75,3 +75,26 @@ Set sh = CreateObject("WScript.Shell")
 result = sh.Run("ss3-script\SS3-メモ追記.vbs ""Comments to be appended""", 0, True)
 ' メモ追記後、result = 0
 ```
+### 出力したCSVファイルの読み取り
+CSV出力で出力したCSVファイルからデータを読み取る関数を利用できます。  
+関数を利用するには、ExecuteGlobal関数で予めスクリプトの内容を読み込んでおきます。
+```vbs
+Dim lib
+Set lib = WScript.CreateObject("Scripting.FileSystemObject").OpenTextFile("ss3-script\SS3-CSV読取.vbs", 1)
+ExecuteGlobal lib.ReadAll
+lib.Close
+```
+#### CSV_getData(title, path)
+`path`で指定したCSVファイルから、`title`で指定した項目の内容を読み取ります。  
+返り値は配列の配列です。
+```vbs
+Dim result = CSV_getData("節点変位", "path\to\output.csv")
+WScript.Echo "節点No." & result(0)(0) & "のX方向の変位は、" & result(0)(5) & "cmです。"
+```
+#### CSV_getDataHeader(title, path)
+`path`で指定したCSVファイルから、`title`で指定した項目のヘッダーを読み取ります。  
+返り値は配列です。
+```vbs
+Dim header = CSV_getDataHeader("節点変位", "path\to\output.csv")
+WScript.Echo "節点変位の最初の項目は、" & header(0)
+```
