@@ -1,5 +1,5 @@
 # SS3-Script
-Super Build／SS3 (UNION SYSTEM Inc.) をVisual Basic Script で操作するためのスクリプト集です。
+ユニオンシステム株式会社 (UNION SYSTEM Inc.) 製の一貫構造計算ソフトウェア (プログラム) である、Super Build／SS3 を Visual Basic Script で操作するための非公式スクリプト集です。
 ## Usage
 ### 非起動確認
 SS3プログラムが起動していないことを確認します。  
