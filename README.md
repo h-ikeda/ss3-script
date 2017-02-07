@@ -30,3 +30,15 @@ Set sh = CreateObject("WScript.Shell")
 result = sh.Run("ss3-script\SS3-終了.vbs", 0, True)
 ' 終了後、result = 0
 ```
+### 解析
+解析を実行します。  
+SS3が起動し、データを開いておく必要があります。  
+ダイアログが開いていてはいけません。  
+解析は「10.断面算定」までを行います。  
+設定は全て事前に行っておく必要があります。
+```vbs
+Dim sh
+Set sh = CreateObject("WScript.Shell")
+result = sh.Run("ss3-script\SS3-解析.vbs", 0, True)
+' 解析完了後、result = 0
+```
