@@ -99,5 +99,3 @@ WScript.Echo "節点No." & result(0)(0) & "のX方向の変位は、" & result(0
 Dim header = CSV_getDataHeader("節点変位", "path\to\output.csv")
 WScript.Echo "節点変位の最初の項目は、" & header(0)
 ```
-## Contact
-ikeda_hiroki@icloud.com
